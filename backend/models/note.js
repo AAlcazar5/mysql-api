@@ -13,7 +13,7 @@ module.exports = class Note {
 
     static save(note) {
         return db.execute(
-            `INSERT INTO notes (title, body, user) VALUES (?, ?, ?)`,
+            'INSERT INTO notes (title, body, user) VALUES (?, ?, ?)',
             [note.title, note.body, note.user]
         );
     }
